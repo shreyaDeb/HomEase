@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+  {% block css %}
+    <link rel="stylesheet" href="{% static "css/home.css" %}">
+  {% endblock %}
+
+  {% block content %}
+    <div class="super">
+        <div class="container">
+            <div class="card">
+                <h1>Buyer</h1>
+                <p>User seeking properties for purchase or investment?</p>
+                <a href="#">Find Listed Properties</a>
+            </div>
+            <div class="card">
+                <h1>Seller</h1>
+                <p>Owner listing their property for sale or rent</p>
+                <a href="{% url 'add_property' %}">Upload Your Property</a>
+            </div>
+            <div class="card">
+                <h1>Contractor</h1>
+                <p>Professional service provider offering construction, renovation, or remodeling services for properties</p>
+                <a href="{% url 'add_contractor' %}">Upload your Information on Services</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

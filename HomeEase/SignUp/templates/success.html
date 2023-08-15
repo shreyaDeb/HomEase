@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/loading.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="hexagon" aria-label="Animated hexagonal ripples">
+        <div class="hexagon__group">
+            <div class="hexagon__sector"></div>
+            <div class="hexagon__sector"></div>
+            <div class="hexagon__sector"></div>
+            <div class="hexagon__sector"></div>
+            <div class="hexagon__sector"></div>
+            <div class="hexagon__sector"></div>
+        </div>
+        <div class="hexagon__group">
+            <div class="hexagon__sector"></div>
+            <div class="hexagon__sector"></div>
+            <div class="hexagon__sector"></div>
+            <div class="hexagon__sector"></div>
+            <div class="hexagon__sector"></div>
+            <div class="hexagon__sector"></div>
+        </div>
+        <div class="hexagon__group">
+            <div class="hexagon__sector"></div>
+            <div class="hexagon__sector"></div>
+            <div class="hexagon__sector"></div>
+            <div class="hexagon__sector"></div>
+            <div class="hexagon__sector"></div>
+            <div class="hexagon__sector"></div>
+        </div>
+        <div class="hexagon__group">
+            <div class="hexagon__sector"></div>
+            <div class="hexagon__sector"></div>
+            <div class="hexagon__sector"></div>
+            <div class="hexagon__sector"></div>
+            <div class="hexagon__sector"></div>
+            <div class="hexagon__sector"></div>
+        </div>
+        <div class="hexagon__group">
+            <div class="hexagon__sector"></div>
+            <div class="hexagon__sector"></div>
+            <div class="hexagon__sector"></div>
+            <div class="hexagon__sector"></div>
+            <div class="hexagon__sector"></div>
+            <div class="hexagon__sector"></div>
+        </div>
+        <div class="hexagon__group">
+            <div class="hexagon__sector"></div>
+            <div class="hexagon__sector"></div>
+            <div class="hexagon__sector"></div>
+            <div class="hexagon__sector"></div>
+            <div class="hexagon__sector"></div>
+            <div class="hexagon__sector"></div>
+        </div>
+    </div>
+    <p aria-label="Loading">Loading</p>
+
+    <script>
+        setTimeout(function() {
+            window.location.href = "{% url 'home' %}";
+        }, 3000);  // 3 seconds
+    </script>
+    
+</body>
+</html>

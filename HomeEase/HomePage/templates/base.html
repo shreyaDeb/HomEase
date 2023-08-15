@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fleur+De+Leah&display=swap');
+        </style>
+    <script src="https://kit.fontawesome.com/e8b611f14d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+    {% block css %}
+    {% endblock %}
+    <title>Document</title>
+</head>
+<body>
+    <!--HEADER == GLOBAL-->
+    <div class="header">
+        <div class="inner_header">
+            <div class="logo_header">
+                <a href="{% url 'home' %}"><h1> Home Ease </h1> </a>       
+            </div>
+
+            <ul class="navigation">
+                <div class="dropdown"></div>
+                <a href="{% url 'home' %}"><li>Home</li></a>
+                <a href="{% url 'contact' %}"><li>Contact Us</li></a>
+                <a href="{% url 'login' %}"><li>Sign In</li></a>
+                
+                <input type="text" name="search" class ="search" placeholder="Search..">
+            </ul>
+        </div>
+
+    </div>
+
+
+    <!--BODY MAIN-->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!--FOOTER-->
+    <div class="footer">
+        <div class="inner_footer">
+            <div class="logo_footer">
+                <img src="{% static 'images/Footer.png' %}">
+            </div>
+            
+            <div class="footer_third">
+                <h4> Email: </h4>
+                <p></p>
+                <a href="mailto:shreya.deb@icloud.com"><p> shreya.deb@icloud.com </p> </a>
+            </div>
+
+            <div class="footer_third">
+                <h4> Contact: </h4>
+                <p></p>
+                <p> +1(415) 341-6290 </p>
+            </div>
+
+            <div class="footer_third">
+                <h4> Follow Us: </h4>
+                <p></p>
+                <li><a href="#"> <i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"> <i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"> <i class="fa fa-instagram"></i></a></li>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

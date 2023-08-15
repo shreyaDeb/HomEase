@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static%}
+<html>
+<head>
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="{% static "css/signup.css"%}">
+</head>
+<body>
+    <div>
+        <form method="post">
+            {% csrf_token %}
+            <label for="firstname">First Name:</label>
+            <input type="text" id="firstname" name="firstname" required><br>
+
+            <label for="lastname">Last Name:</label>
+            <input type="text" id="lastname" name="lastname" required><br>
+            
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br>
+            <input type="submit" value="Sign Up">
+            <p>Already have an Account? <a href="{% url 'login' %}">Login</a> </p>
+            
+            
+            {% if error_message %}
+                <p>{{ error_message }}</p>
+            {% endif %}
+        </form>
+    </div>
+</body>
+</html>
