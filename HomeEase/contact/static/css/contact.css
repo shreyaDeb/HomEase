@@ -17,7 +17,7 @@
 
 
 .left{
-	background: url("some_image") no-repeat center; /*TODO: add some image*/
+	background: "galaxy.png" no-repeat center; /*TODO: add some image*/
 	background-size: cover;
 	height: 100%;
     border-radius: 10px;
