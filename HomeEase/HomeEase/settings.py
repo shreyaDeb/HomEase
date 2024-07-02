@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-p6=r&q&ient4m$rzh006x7)0d=*^8@ra&dfs%uov02h-em93zy
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["ahomazen.com", "www.ahomazen.com"]
+ALLOWED_HOSTS = ["ahomazen.com" , "www.ahomazen.com" , "157.173.218.123"]
 
 
 # Application definition
@@ -80,8 +80,12 @@ WSGI_APPLICATION = 'HomeEase.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'mydatabase',
+        'USER': 'ZenHome',
+        'PASSWORD': 'Zen@Home6562',
+        'HOST': 'localhost',
+        'PORT': '3306',
     }
 }
 
@@ -120,18 +124,25 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/var/www/html/mydjangoapp/static/'
+STATIC_ROOT = ''
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
+
+SECURE_BROWSER_XSS_FILTER = True
+SECURE_CONTENT_TYPE_NOSNIFF = True
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
+X_FRAME_OPTIONS = 'DENY'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'  # e.g., 'smtp.gmail.com'
+EMAIL_HOST = 'smtp.mail.me.com'  # e.g., 'smtp.gmail.com'
 EMAIL_PORT = 587  # Port for SMTP
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'shreya.deb.1602@gmail.com'  # Your email address
-EMAIL_HOST_PASSWORD = 'Wb248380@@'  # Your email password or app password (if using Gmail)
+EMAIL_HOST_USER = 'shreya.deb.@icloud.com'  # Your email address
+EMAIL_HOST_PASSWORD = 'csoi-gmjj-qogl-yqms'  # Your email password or app password (if using Gmail)
 EMAIL_USE_SSL = False
